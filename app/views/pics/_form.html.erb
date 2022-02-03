@@ -1,0 +1,13 @@
+<%= simple_form_for @pic do |f| %>
+    <% if @pic.errors.any? %>
+        <ul>
+         <li><%= @pic.errors.full_messages %></li>
+        <ul>
+    <% end  %>
+    
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <br>
+    <%= f.button :submit ,class: 'btn btn-primary' %>
+
+<% end %>
